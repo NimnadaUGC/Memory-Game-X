@@ -12,14 +12,19 @@ jobs:
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetches all history for all branches and tags
 
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'
+        node-version: '16'
 
     - name: Install dependencies
       run: npm install
+
+    - name: Fetch all history
+      run: git fetch --all
 
     - name: Build the project
       run: npm run build
