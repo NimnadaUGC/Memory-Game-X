@@ -37,6 +37,36 @@ The Advanced Memory Game offers an interactive way to test and improve memory sk
 1. Ensure the repository is public.
 2. Enable GitHub Pages in the repository settings.
 
+## Configuration
+
+### Firebase Setup
+
+To connect the game with your Firebase project for authentication and database services, follow these steps:
+
+1. Visit the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new project or select an existing one.
+3. Navigate to the project settings to find your Firebase configuration details.
+4. Replace the following placeholder values in `script.js` with your actual Firebase project configuration:
+
+    ```javascript
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID",
+        measurementId: "YOUR_MEASUREMENT_ID",
+        databaseURL: "YOUR_DATABASE_URL"
+    };
+    ```
+
+5. Ensure you enable Firebase Authentication and the Realtime Database in your Firebase project settings.
+
+### Removing Personal API Keys
+
+Before pushing changes to public repositories or deploying, ensure you remove or replace any personal API keys in the `script.js` to prevent unauthorized use and potential security risks.
+
 ## Usage
 
 1. Open the application.
